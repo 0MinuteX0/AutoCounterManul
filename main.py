@@ -1,12 +1,19 @@
 import discord
 import token_file
 import config
+import os
 from discord.ext import commands
 
 client = commands.Bot(command_prefix='|')
 manul_list = ['манул', 'манулов', 'манул', 'манула']
+olenf = "C:\\Users\\MinuteX\\Desktop\\Код\\Python\\AutoCounterManul\\files\\olen.png"
+olen = os.path.join(os.path.dirname("oleg.png"), "images/")
 
-@client.event
+@client.command()
+async def олень(ctx, **kwargs):
+    await ctx.send(content="Олень обыкновенный", file=discord.File("C:\\Users\\MinuteX\\Desktop\\Код\\Python\\AutoCounterManul\\files\\olen.png"))
+
+@яclient.event
 async def on_ready():
     print("Connect Successfullyct")
 
@@ -14,6 +21,7 @@ async def on_ready():
 async def hello(ctx):
     author = ctx.message.author
     await ctx.send(f'Хей, {author.mention}, тебя приветсвует счетчик манулов')
+
 
 @client.command()
 async def bind(ctx):
