@@ -13,7 +13,7 @@ olen = os.path.join(os.path.dirname("oleg.png"), "images/")
 async def олень(ctx, **kwargs):
     await ctx.send(content="Олень обыкновенный", file=discord.File("C:\\Users\\MinuteX\\Desktop\\Код\\Python\\AutoCounterManul\\files\\olen.png"))
 
-@яclient.event
+@client.event
 async def on_ready():
     print("Connect Successfullyct")
 
@@ -41,6 +41,7 @@ async def manul(ctx, message):
     not_num_msg = msg
     if msg in manul_list:
         await ctx.send('debug massage')
+        
 
     await ctx.send(f'Уже {num_manul} манулов')
 
