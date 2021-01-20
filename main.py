@@ -4,7 +4,7 @@ import config
 import os
 from discord.ext import commands
 
-client = commands.Bot(command_prefix='|')
+client = commands.Bot(command_prefix=',')
 manul_list = ['манул', 'манулов', 'манул', 'манула']
 olenf = "C:\\Users\\MinuteX\\Desktop\\Код\\Python\\AutoCounterManul\\files\\olen.png"
 olen = os.path.join(os.path.dirname("oleg.png"), "images/")
